@@ -2,49 +2,61 @@
 grammar C;
 
 /* regra raiz da gramática */
-file: (statement | directive | func_decl)*
+file
+	: (statement | directive | func_decl)*
 	;
 
 directive
-	: 'implementar'
+	: '#include' DIR
 	;
 
 func_decl
-	: 'implementar'
+	: type ID '(' params* ')' '{' statement* '}'
 	;
 
 statement
 	: var_decl ';'
 	| expr ';'
-	| 'implementar'
+	| 'return' expr? ';'
 	;
 
 var_decl
-	: 'implementar' 
+	: type ID
+	| type ID '=' expr (',' ID '=' expr | ',' ID)*	
 	;
 
-expr: expr '*' expr
+expr
+	: expr '*' expr
+	| expr '/' expr
+	| expr '-' expr
+	| expr '+' expr
+	| STR
+	| '(' expr ')'
 	| func_call
 	| INT
-	| 'implementar'
+	| ID
 	;
 
 func_call
-	: 'implementar'
+	: ID '(' (expr | expr ',')* ')'
 	;
 
-type: 'int'
+type
+	: 'int'
 	;
 
-/* implementar mais regras gramaticais, se precisar */
-
+params
+	: type ID (',' type ID)*
+	| type ID
+	;
 
 
 /* lexer */  
+ID  : [a-zA-Z]+[0-9]* ;
 STR : ["].*?["] ;
 INT : [0-9]+ ;
+DIR:  [<].*?[>];
 WS  : [ \t\r\n]+ -> skip ;
-/* implementar mais expressões regulares, se precisar*/
 
 
 

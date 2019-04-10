@@ -1,0 +1,2 @@
+bool a = +false
+bool lol = -true && false;
