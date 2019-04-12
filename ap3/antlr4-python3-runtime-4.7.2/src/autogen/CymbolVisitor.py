@@ -14,11 +14,6 @@ class CymbolVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by CymbolParser#varDecl.
-    def visitVarDecl(self, ctx:CymbolParser.VarDeclContext):
-        return self.visitChildren(ctx)
-
-
     # Visit a parse tree produced by CymbolParser#FormTypeInt.
     def visitFormTypeInt(self, ctx:CymbolParser.FormTypeIntContext):
         return self.visitChildren(ctx)
@@ -49,6 +44,11 @@ class CymbolVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by CymbolParser#varDecl.
+    def visitVarDecl(self, ctx:CymbolParser.VarDeclContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by CymbolParser#paramTypeList.
     def visitParamTypeList(self, ctx:CymbolParser.ParamTypeListContext):
         return self.visitChildren(ctx)
@@ -61,6 +61,11 @@ class CymbolVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by CymbolParser#block.
     def visitBlock(self, ctx:CymbolParser.BlockContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by CymbolParser#stat.
+    def visitStat(self, ctx:CymbolParser.StatContext):
         return self.visitChildren(ctx)
 
 
@@ -101,11 +106,6 @@ class CymbolVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by CymbolParser#elseStat.
     def visitElseStat(self, ctx:CymbolParser.ElseStatContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by CymbolParser#stat.
-    def visitStat(self, ctx:CymbolParser.StatContext):
         return self.visitChildren(ctx)
 
 

@@ -56,9 +56,6 @@ WS           : [ \t\n\r]+ -> skip;
 fiile : (funcDecl | varDecl)+ EOF?
       ;
 
-varDecl : tyype ID ('=' expr)? ';'
-        ;
-
 tyype : TYPEINT                                   #FormTypeInt
       | TYPEVOID                                  #FormTypeVoid
       | TYPEFLOAT                                 #FormTypeFloat
@@ -66,8 +63,11 @@ tyype : TYPEINT                                   #FormTypeInt
       | TYPEBOOL                                  #FormTypeBool
       ;
 
-funcDecl : tyype ID '(' paramTypeList? ')' block
+funcDecl : functionType=tyype ID '('paramTypeList?')' block
          ;
+
+varDecl : tyype ID ('=' expr)? ';'
+        ;
 
 paramTypeList : paramType (',' paramType)*
               ;
@@ -78,10 +78,17 @@ paramType : tyype ID
 block : '{' stat* '}'
       ;
 
+stat : varDecl
+     | ifElseStat
+     | returnStat
+     | assignStat
+     | exprStat
+     ;
+
 assignStat : ID '=' expr ';'
            ;
 
-returnStat : 'return' expr? ';'
+returnStat : RETURN expr? ';'
            ;
 
 ifElseStat : ifStat (elseStat)?
@@ -106,12 +113,7 @@ ifStat : 'if' '(' expr ')' ifElseExprStat
 elseStat : 'else' ifElseExprStat
          ;
 
-stat : varDecl
-     | ifElseStat
-     | returnStat
-     | assignStat
-     | exprStat
-     ;
+
 
 expr : ID '(' exprList? ')'                      #FunctionCallExpr
      | op=('+' | '-') expr                       #SignedExpr

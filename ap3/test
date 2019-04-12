@@ -1,2 +1,6 @@
-bool a = +false
-bool lol = -true && false;
+int funct (int a, int b, bool c){
+    bool i = false;
+    if(!i){
+        return 0;
+    }
+}

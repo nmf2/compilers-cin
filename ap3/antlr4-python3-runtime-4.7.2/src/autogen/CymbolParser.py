@@ -12,72 +12,72 @@ def serializedATN():
         buf.write("\u00b2\4\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7")
         buf.write("\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t\13\4\f\t\f\4\r\t\r\4\16")
         buf.write("\t\16\4\17\t\17\4\20\t\20\4\21\t\21\4\22\t\22\3\2\3\2")
-        buf.write("\6\2\'\n\2\r\2\16\2(\3\2\5\2,\n\2\3\3\3\3\3\3\3\3\5\3")
-        buf.write("\62\n\3\3\3\3\3\3\4\3\4\3\4\3\4\3\4\5\4;\n\4\3\5\3\5\3")
-        buf.write("\5\3\5\5\5A\n\5\3\5\3\5\3\5\3\6\3\6\3\6\7\6I\n\6\f\6\16")
+        buf.write("\6\2\'\n\2\r\2\16\2(\3\2\5\2,\n\2\3\3\3\3\3\3\3\3\3\3")
+        buf.write("\5\3\63\n\3\3\4\3\4\3\4\3\4\5\49\n\4\3\4\3\4\3\4\3\5\3")
+        buf.write("\5\3\5\3\5\5\5B\n\5\3\5\3\5\3\6\3\6\3\6\7\6I\n\6\f\6\16")
         buf.write("\6L\13\6\3\7\3\7\3\7\3\b\3\b\7\bS\n\b\f\b\16\bV\13\b\3")
-        buf.write("\b\3\b\3\t\3\t\3\t\3\t\3\t\3\n\3\n\5\na\n\n\3\n\3\n\3")
-        buf.write("\13\3\13\5\13g\n\13\3\f\3\f\3\f\3\f\3\f\5\fn\n\f\3\r\3")
-        buf.write("\r\3\r\3\16\3\16\3\16\7\16v\n\16\f\16\16\16y\13\16\3\17")
-        buf.write("\3\17\3\17\3\17\3\17\3\17\3\20\3\20\3\20\3\21\3\21\3\21")
-        buf.write("\3\21\3\21\5\21\u0089\n\21\3\22\3\22\3\22\3\22\5\22\u008f")
+        buf.write("\b\3\b\3\t\3\t\3\t\3\t\3\t\5\t_\n\t\3\n\3\n\3\n\3\n\3")
+        buf.write("\n\3\13\3\13\5\13h\n\13\3\13\3\13\3\f\3\f\5\fn\n\f\3\r")
+        buf.write("\3\r\3\r\3\r\3\r\5\ru\n\r\3\16\3\16\3\16\3\17\3\17\3\17")
+        buf.write("\7\17}\n\17\f\17\16\17\u0080\13\17\3\20\3\20\3\20\3\20")
+        buf.write("\3\20\3\20\3\21\3\21\3\21\3\22\3\22\3\22\3\22\5\22\u008f")
         buf.write("\n\22\3\22\3\22\3\22\3\22\3\22\3\22\3\22\3\22\3\22\3\22")
         buf.write("\3\22\3\22\3\22\3\22\5\22\u009f\n\22\3\22\3\22\3\22\3")
         buf.write("\22\3\22\3\22\3\22\3\22\3\22\3\22\3\22\3\22\7\22\u00ad")
         buf.write("\n\22\f\22\16\22\u00b0\13\22\3\22\2\3\"\23\2\4\6\b\n\f")
         buf.write("\16\20\22\24\26\30\32\34\36 \"\2\6\3\2\35\36\3\2\27\32")
-        buf.write("\3\2\33\34\3\2\3\4\2\u00c3\2&\3\2\2\2\4-\3\2\2\2\6:\3")
-        buf.write("\2\2\2\b<\3\2\2\2\nE\3\2\2\2\fM\3\2\2\2\16P\3\2\2\2\20")
-        buf.write("Y\3\2\2\2\22^\3\2\2\2\24d\3\2\2\2\26m\3\2\2\2\30o\3\2")
-        buf.write("\2\2\32r\3\2\2\2\34z\3\2\2\2\36\u0080\3\2\2\2 \u0088\3")
-        buf.write("\2\2\2\"\u009e\3\2\2\2$\'\5\b\5\2%\'\5\4\3\2&$\3\2\2\2")
-        buf.write("&%\3\2\2\2\'(\3\2\2\2(&\3\2\2\2()\3\2\2\2)+\3\2\2\2*,")
-        buf.write("\7\2\2\3+*\3\2\2\2+,\3\2\2\2,\3\3\2\2\2-.\5\6\4\2.\61")
-        buf.write("\7 \2\2/\60\7\23\2\2\60\62\5\"\22\2\61/\3\2\2\2\61\62")
-        buf.write("\3\2\2\2\62\63\3\2\2\2\63\64\7\20\2\2\64\5\3\2\2\2\65")
-        buf.write(";\7\6\2\2\66;\7\7\2\2\67;\7\b\2\28;\7\t\2\29;\7\5\2\2")
-        buf.write(":\65\3\2\2\2:\66\3\2\2\2:\67\3\2\2\2:8\3\2\2\2:9\3\2\2")
-        buf.write("\2;\7\3\2\2\2<=\5\6\4\2=>\7 \2\2>@\7\r\2\2?A\5\n\6\2@")
-        buf.write("?\3\2\2\2@A\3\2\2\2AB\3\2\2\2BC\7\16\2\2CD\5\16\b\2D\t")
-        buf.write("\3\2\2\2EJ\5\f\7\2FG\7\17\2\2GI\5\f\7\2HF\3\2\2\2IL\3")
-        buf.write("\2\2\2JH\3\2\2\2JK\3\2\2\2K\13\3\2\2\2LJ\3\2\2\2MN\5\6")
-        buf.write("\4\2NO\7 \2\2O\r\3\2\2\2PT\7\21\2\2QS\5 \21\2RQ\3\2\2")
-        buf.write("\2SV\3\2\2\2TR\3\2\2\2TU\3\2\2\2UW\3\2\2\2VT\3\2\2\2W")
-        buf.write("X\7\22\2\2X\17\3\2\2\2YZ\7 \2\2Z[\7\23\2\2[\\\5\"\22\2")
-        buf.write("\\]\7\20\2\2]\21\3\2\2\2^`\7\f\2\2_a\5\"\22\2`_\3\2\2")
-        buf.write("\2`a\3\2\2\2ab\3\2\2\2bc\7\20\2\2c\23\3\2\2\2df\5\34\17")
-        buf.write("\2eg\5\36\20\2fe\3\2\2\2fg\3\2\2\2g\25\3\2\2\2hn\5\16")
-        buf.write("\b\2in\5\24\13\2jn\5\22\n\2kn\5\20\t\2ln\5\30\r\2mh\3")
-        buf.write("\2\2\2mi\3\2\2\2mj\3\2\2\2mk\3\2\2\2ml\3\2\2\2n\27\3\2")
-        buf.write("\2\2op\5\"\22\2pq\7\20\2\2q\31\3\2\2\2rw\5\"\22\2st\7")
-        buf.write("\17\2\2tv\5\"\22\2us\3\2\2\2vy\3\2\2\2wu\3\2\2\2wx\3\2")
-        buf.write("\2\2x\33\3\2\2\2yw\3\2\2\2z{\7\n\2\2{|\7\r\2\2|}\5\"\22")
-        buf.write("\2}~\7\16\2\2~\177\5\26\f\2\177\35\3\2\2\2\u0080\u0081")
-        buf.write("\7\13\2\2\u0081\u0082\5\26\f\2\u0082\37\3\2\2\2\u0083")
-        buf.write("\u0089\5\4\3\2\u0084\u0089\5\24\13\2\u0085\u0089\5\22")
-        buf.write("\n\2\u0086\u0089\5\20\t\2\u0087\u0089\5\30\r\2\u0088\u0083")
-        buf.write("\3\2\2\2\u0088\u0084\3\2\2\2\u0088\u0085\3\2\2\2\u0088")
-        buf.write("\u0086\3\2\2\2\u0088\u0087\3\2\2\2\u0089!\3\2\2\2\u008a")
-        buf.write("\u008b\b\22\1\2\u008b\u008c\7 \2\2\u008c\u008e\7\r\2\2")
-        buf.write("\u008d\u008f\5\32\16\2\u008e\u008d\3\2\2\2\u008e\u008f")
-        buf.write("\3\2\2\2\u008f\u0090\3\2\2\2\u0090\u009f\7\16\2\2\u0091")
-        buf.write("\u0092\t\2\2\2\u0092\u009f\5\"\22\16\u0093\u0094\7\26")
-        buf.write("\2\2\u0094\u009f\5\"\22\r\u0095\u009f\7 \2\2\u0096\u009f")
-        buf.write("\7!\2\2\u0097\u009f\7\"\2\2\u0098\u009f\7#\2\2\u0099\u009f")
-        buf.write("\7\37\2\2\u009a\u009b\7\r\2\2\u009b\u009c\5\"\22\2\u009c")
-        buf.write("\u009d\7\16\2\2\u009d\u009f\3\2\2\2\u009e\u008a\3\2\2")
-        buf.write("\2\u009e\u0091\3\2\2\2\u009e\u0093\3\2\2\2\u009e\u0095")
-        buf.write("\3\2\2\2\u009e\u0096\3\2\2\2\u009e\u0097\3\2\2\2\u009e")
-        buf.write("\u0098\3\2\2\2\u009e\u0099\3\2\2\2\u009e\u009a\3\2\2\2")
-        buf.write("\u009f\u00ae\3\2\2\2\u00a0\u00a1\f\f\2\2\u00a1\u00a2\t")
-        buf.write("\3\2\2\u00a2\u00ad\5\"\22\r\u00a3\u00a4\f\13\2\2\u00a4")
-        buf.write("\u00a5\t\4\2\2\u00a5\u00ad\5\"\22\f\u00a6\u00a7\f\n\2")
-        buf.write("\2\u00a7\u00a8\t\2\2\2\u00a8\u00ad\5\"\22\13\u00a9\u00aa")
-        buf.write("\f\t\2\2\u00aa\u00ab\t\5\2\2\u00ab\u00ad\5\"\22\n\u00ac")
-        buf.write("\u00a0\3\2\2\2\u00ac\u00a3\3\2\2\2\u00ac\u00a6\3\2\2\2")
-        buf.write("\u00ac\u00a9\3\2\2\2\u00ad\u00b0\3\2\2\2\u00ae\u00ac\3")
-        buf.write("\2\2\2\u00ae\u00af\3\2\2\2\u00af#\3\2\2\2\u00b0\u00ae")
-        buf.write("\3\2\2\2\23&(+\61:@JT`fmw\u0088\u008e\u009e\u00ac\u00ae")
+        buf.write("\3\2\33\34\3\2\3\4\2\u00c3\2&\3\2\2\2\4\62\3\2\2\2\6\64")
+        buf.write("\3\2\2\2\b=\3\2\2\2\nE\3\2\2\2\fM\3\2\2\2\16P\3\2\2\2")
+        buf.write("\20^\3\2\2\2\22`\3\2\2\2\24e\3\2\2\2\26k\3\2\2\2\30t\3")
+        buf.write("\2\2\2\32v\3\2\2\2\34y\3\2\2\2\36\u0081\3\2\2\2 \u0087")
+        buf.write("\3\2\2\2\"\u009e\3\2\2\2$\'\5\6\4\2%\'\5\b\5\2&$\3\2\2")
+        buf.write("\2&%\3\2\2\2\'(\3\2\2\2(&\3\2\2\2()\3\2\2\2)+\3\2\2\2")
+        buf.write("*,\7\2\2\3+*\3\2\2\2+,\3\2\2\2,\3\3\2\2\2-\63\7\6\2\2")
+        buf.write(".\63\7\7\2\2/\63\7\b\2\2\60\63\7\t\2\2\61\63\7\5\2\2\62")
+        buf.write("-\3\2\2\2\62.\3\2\2\2\62/\3\2\2\2\62\60\3\2\2\2\62\61")
+        buf.write("\3\2\2\2\63\5\3\2\2\2\64\65\5\4\3\2\65\66\7 \2\2\668\7")
+        buf.write("\r\2\2\679\5\n\6\28\67\3\2\2\289\3\2\2\29:\3\2\2\2:;\7")
+        buf.write("\16\2\2;<\5\16\b\2<\7\3\2\2\2=>\5\4\3\2>A\7 \2\2?@\7\23")
+        buf.write("\2\2@B\5\"\22\2A?\3\2\2\2AB\3\2\2\2BC\3\2\2\2CD\7\20\2")
+        buf.write("\2D\t\3\2\2\2EJ\5\f\7\2FG\7\17\2\2GI\5\f\7\2HF\3\2\2\2")
+        buf.write("IL\3\2\2\2JH\3\2\2\2JK\3\2\2\2K\13\3\2\2\2LJ\3\2\2\2M")
+        buf.write("N\5\4\3\2NO\7 \2\2O\r\3\2\2\2PT\7\21\2\2QS\5\20\t\2RQ")
+        buf.write("\3\2\2\2SV\3\2\2\2TR\3\2\2\2TU\3\2\2\2UW\3\2\2\2VT\3\2")
+        buf.write("\2\2WX\7\22\2\2X\17\3\2\2\2Y_\5\b\5\2Z_\5\26\f\2[_\5\24")
+        buf.write("\13\2\\_\5\22\n\2]_\5\32\16\2^Y\3\2\2\2^Z\3\2\2\2^[\3")
+        buf.write("\2\2\2^\\\3\2\2\2^]\3\2\2\2_\21\3\2\2\2`a\7 \2\2ab\7\23")
+        buf.write("\2\2bc\5\"\22\2cd\7\20\2\2d\23\3\2\2\2eg\7\f\2\2fh\5\"")
+        buf.write("\22\2gf\3\2\2\2gh\3\2\2\2hi\3\2\2\2ij\7\20\2\2j\25\3\2")
+        buf.write("\2\2km\5\36\20\2ln\5 \21\2ml\3\2\2\2mn\3\2\2\2n\27\3\2")
+        buf.write("\2\2ou\5\16\b\2pu\5\26\f\2qu\5\24\13\2ru\5\22\n\2su\5")
+        buf.write("\32\16\2to\3\2\2\2tp\3\2\2\2tq\3\2\2\2tr\3\2\2\2ts\3\2")
+        buf.write("\2\2u\31\3\2\2\2vw\5\"\22\2wx\7\20\2\2x\33\3\2\2\2y~\5")
+        buf.write("\"\22\2z{\7\17\2\2{}\5\"\22\2|z\3\2\2\2}\u0080\3\2\2\2")
+        buf.write("~|\3\2\2\2~\177\3\2\2\2\177\35\3\2\2\2\u0080~\3\2\2\2")
+        buf.write("\u0081\u0082\7\n\2\2\u0082\u0083\7\r\2\2\u0083\u0084\5")
+        buf.write("\"\22\2\u0084\u0085\7\16\2\2\u0085\u0086\5\30\r\2\u0086")
+        buf.write("\37\3\2\2\2\u0087\u0088\7\13\2\2\u0088\u0089\5\30\r\2")
+        buf.write("\u0089!\3\2\2\2\u008a\u008b\b\22\1\2\u008b\u008c\7 \2")
+        buf.write("\2\u008c\u008e\7\r\2\2\u008d\u008f\5\34\17\2\u008e\u008d")
+        buf.write("\3\2\2\2\u008e\u008f\3\2\2\2\u008f\u0090\3\2\2\2\u0090")
+        buf.write("\u009f\7\16\2\2\u0091\u0092\t\2\2\2\u0092\u009f\5\"\22")
+        buf.write("\16\u0093\u0094\7\26\2\2\u0094\u009f\5\"\22\r\u0095\u009f")
+        buf.write("\7 \2\2\u0096\u009f\7!\2\2\u0097\u009f\7\"\2\2\u0098\u009f")
+        buf.write("\7#\2\2\u0099\u009f\7\37\2\2\u009a\u009b\7\r\2\2\u009b")
+        buf.write("\u009c\5\"\22\2\u009c\u009d\7\16\2\2\u009d\u009f\3\2\2")
+        buf.write("\2\u009e\u008a\3\2\2\2\u009e\u0091\3\2\2\2\u009e\u0093")
+        buf.write("\3\2\2\2\u009e\u0095\3\2\2\2\u009e\u0096\3\2\2\2\u009e")
+        buf.write("\u0097\3\2\2\2\u009e\u0098\3\2\2\2\u009e\u0099\3\2\2\2")
+        buf.write("\u009e\u009a\3\2\2\2\u009f\u00ae\3\2\2\2\u00a0\u00a1\f")
+        buf.write("\f\2\2\u00a1\u00a2\t\3\2\2\u00a2\u00ad\5\"\22\r\u00a3")
+        buf.write("\u00a4\f\13\2\2\u00a4\u00a5\t\4\2\2\u00a5\u00ad\5\"\22")
+        buf.write("\f\u00a6\u00a7\f\n\2\2\u00a7\u00a8\t\2\2\2\u00a8\u00ad")
+        buf.write("\5\"\22\13\u00a9\u00aa\f\t\2\2\u00aa\u00ab\t\5\2\2\u00ab")
+        buf.write("\u00ad\5\"\22\n\u00ac\u00a0\3\2\2\2\u00ac\u00a3\3\2\2")
+        buf.write("\2\u00ac\u00a6\3\2\2\2\u00ac\u00a9\3\2\2\2\u00ad\u00b0")
+        buf.write("\3\2\2\2\u00ae\u00ac\3\2\2\2\u00ae\u00af\3\2\2\2\u00af")
+        buf.write("#\3\2\2\2\u00b0\u00ae\3\2\2\2\23&(+\628AJT^gmt~\u008e")
+        buf.write("\u009e\u00ac\u00ae")
         return buf.getvalue()
 
 
@@ -106,27 +106,27 @@ class CymbolParser ( Parser ):
                       "WS" ]
 
     RULE_fiile = 0
-    RULE_varDecl = 1
-    RULE_tyype = 2
-    RULE_funcDecl = 3
+    RULE_tyype = 1
+    RULE_funcDecl = 2
+    RULE_varDecl = 3
     RULE_paramTypeList = 4
     RULE_paramType = 5
     RULE_block = 6
-    RULE_assignStat = 7
-    RULE_returnStat = 8
-    RULE_ifElseStat = 9
-    RULE_ifElseExprStat = 10
-    RULE_exprStat = 11
-    RULE_exprList = 12
-    RULE_ifStat = 13
-    RULE_elseStat = 14
-    RULE_stat = 15
+    RULE_stat = 7
+    RULE_assignStat = 8
+    RULE_returnStat = 9
+    RULE_ifElseStat = 10
+    RULE_ifElseExprStat = 11
+    RULE_exprStat = 12
+    RULE_exprList = 13
+    RULE_ifStat = 14
+    RULE_elseStat = 15
     RULE_expr = 16
 
-    ruleNames =  [ "fiile", "varDecl", "tyype", "funcDecl", "paramTypeList", 
-                   "paramType", "block", "assignStat", "returnStat", "ifElseStat", 
-                   "ifElseExprStat", "exprStat", "exprList", "ifStat", "elseStat", 
-                   "stat", "expr" ]
+    ruleNames =  [ "fiile", "tyype", "funcDecl", "varDecl", "paramTypeList", 
+                   "paramType", "block", "stat", "assignStat", "returnStat", 
+                   "ifElseStat", "ifElseExprStat", "exprStat", "exprList", 
+                   "ifStat", "elseStat", "expr" ]
 
     EOF = Token.EOF
     T__0=1
@@ -258,73 +258,6 @@ class CymbolParser ( Parser ):
         return localctx
 
 
-    class VarDeclContext(ParserRuleContext):
-
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
-
-        def tyype(self):
-            return self.getTypedRuleContext(CymbolParser.TyypeContext,0)
-
-
-        def ID(self):
-            return self.getToken(CymbolParser.ID, 0)
-
-        def SEMICOLON(self):
-            return self.getToken(CymbolParser.SEMICOLON, 0)
-
-        def AS(self):
-            return self.getToken(CymbolParser.AS, 0)
-
-        def expr(self):
-            return self.getTypedRuleContext(CymbolParser.ExprContext,0)
-
-
-        def getRuleIndex(self):
-            return CymbolParser.RULE_varDecl
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitVarDecl" ):
-                return visitor.visitVarDecl(self)
-            else:
-                return visitor.visitChildren(self)
-
-
-
-
-    def varDecl(self):
-
-        localctx = CymbolParser.VarDeclContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 2, self.RULE_varDecl)
-        self._la = 0 # Token type
-        try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 43
-            self.tyype()
-            self.state = 44
-            self.match(CymbolParser.ID)
-            self.state = 47
-            self._errHandler.sync(self)
-            _la = self._input.LA(1)
-            if _la==CymbolParser.AS:
-                self.state = 45
-                self.match(CymbolParser.AS)
-                self.state = 46
-                self.expr(0)
-
-
-            self.state = 49
-            self.match(CymbolParser.SEMICOLON)
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.exitRule()
-        return localctx
-
-
     class TyypeContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
@@ -425,39 +358,39 @@ class CymbolParser ( Parser ):
     def tyype(self):
 
         localctx = CymbolParser.TyypeContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 4, self.RULE_tyype)
+        self.enterRule(localctx, 2, self.RULE_tyype)
         try:
-            self.state = 56
+            self.state = 48
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [CymbolParser.TYPEINT]:
                 localctx = CymbolParser.FormTypeIntContext(self, localctx)
                 self.enterOuterAlt(localctx, 1)
-                self.state = 51
+                self.state = 43
                 self.match(CymbolParser.TYPEINT)
                 pass
             elif token in [CymbolParser.TYPEVOID]:
                 localctx = CymbolParser.FormTypeVoidContext(self, localctx)
                 self.enterOuterAlt(localctx, 2)
-                self.state = 52
+                self.state = 44
                 self.match(CymbolParser.TYPEVOID)
                 pass
             elif token in [CymbolParser.TYPEFLOAT]:
                 localctx = CymbolParser.FormTypeFloatContext(self, localctx)
                 self.enterOuterAlt(localctx, 3)
-                self.state = 53
+                self.state = 45
                 self.match(CymbolParser.TYPEFLOAT)
                 pass
             elif token in [CymbolParser.TYPESTRING]:
                 localctx = CymbolParser.FormTypeStringContext(self, localctx)
                 self.enterOuterAlt(localctx, 4)
-                self.state = 54
+                self.state = 46
                 self.match(CymbolParser.TYPESTRING)
                 pass
             elif token in [CymbolParser.TYPEBOOL]:
                 localctx = CymbolParser.FormTypeBoolContext(self, localctx)
                 self.enterOuterAlt(localctx, 5)
-                self.state = 55
+                self.state = 47
                 self.match(CymbolParser.TYPEBOOL)
                 pass
             else:
@@ -477,10 +410,7 @@ class CymbolParser ( Parser ):
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
-
-        def tyype(self):
-            return self.getTypedRuleContext(CymbolParser.TyypeContext,0)
-
+            self.functionType = None # TyypeContext
 
         def ID(self):
             return self.getToken(CymbolParser.ID, 0)
@@ -493,6 +423,10 @@ class CymbolParser ( Parser ):
 
         def block(self):
             return self.getTypedRuleContext(CymbolParser.BlockContext,0)
+
+
+        def tyype(self):
+            return self.getTypedRuleContext(CymbolParser.TyypeContext,0)
 
 
         def paramTypeList(self):
@@ -514,28 +448,95 @@ class CymbolParser ( Parser ):
     def funcDecl(self):
 
         localctx = CymbolParser.FuncDeclContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 6, self.RULE_funcDecl)
+        self.enterRule(localctx, 4, self.RULE_funcDecl)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 58
-            self.tyype()
-            self.state = 59
+            self.state = 50
+            localctx.functionType = self.tyype()
+            self.state = 51
             self.match(CymbolParser.ID)
-            self.state = 60
+            self.state = 52
             self.match(CymbolParser.LP)
-            self.state = 62
+            self.state = 54
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CymbolParser.TYPEBOOL) | (1 << CymbolParser.TYPEINT) | (1 << CymbolParser.TYPEVOID) | (1 << CymbolParser.TYPEFLOAT) | (1 << CymbolParser.TYPESTRING))) != 0):
-                self.state = 61
+                self.state = 53
                 self.paramTypeList()
 
 
-            self.state = 64
+            self.state = 56
             self.match(CymbolParser.RP)
-            self.state = 65
+            self.state = 57
             self.block()
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class VarDeclContext(ParserRuleContext):
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def tyype(self):
+            return self.getTypedRuleContext(CymbolParser.TyypeContext,0)
+
+
+        def ID(self):
+            return self.getToken(CymbolParser.ID, 0)
+
+        def SEMICOLON(self):
+            return self.getToken(CymbolParser.SEMICOLON, 0)
+
+        def AS(self):
+            return self.getToken(CymbolParser.AS, 0)
+
+        def expr(self):
+            return self.getTypedRuleContext(CymbolParser.ExprContext,0)
+
+
+        def getRuleIndex(self):
+            return CymbolParser.RULE_varDecl
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitVarDecl" ):
+                return visitor.visitVarDecl(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def varDecl(self):
+
+        localctx = CymbolParser.VarDeclContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 6, self.RULE_varDecl)
+        self._la = 0 # Token type
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 59
+            self.tyype()
+            self.state = 60
+            self.match(CymbolParser.ID)
+            self.state = 63
+            self._errHandler.sync(self)
+            _la = self._input.LA(1)
+            if _la==CymbolParser.AS:
+                self.state = 61
+                self.match(CymbolParser.AS)
+                self.state = 62
+                self.expr(0)
+
+
+            self.state = 65
+            self.match(CymbolParser.SEMICOLON)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -711,6 +712,92 @@ class CymbolParser ( Parser ):
         return localctx
 
 
+    class StatContext(ParserRuleContext):
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def varDecl(self):
+            return self.getTypedRuleContext(CymbolParser.VarDeclContext,0)
+
+
+        def ifElseStat(self):
+            return self.getTypedRuleContext(CymbolParser.IfElseStatContext,0)
+
+
+        def returnStat(self):
+            return self.getTypedRuleContext(CymbolParser.ReturnStatContext,0)
+
+
+        def assignStat(self):
+            return self.getTypedRuleContext(CymbolParser.AssignStatContext,0)
+
+
+        def exprStat(self):
+            return self.getTypedRuleContext(CymbolParser.ExprStatContext,0)
+
+
+        def getRuleIndex(self):
+            return CymbolParser.RULE_stat
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitStat" ):
+                return visitor.visitStat(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def stat(self):
+
+        localctx = CymbolParser.StatContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 14, self.RULE_stat)
+        try:
+            self.state = 92
+            self._errHandler.sync(self)
+            la_ = self._interp.adaptivePredict(self._input,8,self._ctx)
+            if la_ == 1:
+                self.enterOuterAlt(localctx, 1)
+                self.state = 87
+                self.varDecl()
+                pass
+
+            elif la_ == 2:
+                self.enterOuterAlt(localctx, 2)
+                self.state = 88
+                self.ifElseStat()
+                pass
+
+            elif la_ == 3:
+                self.enterOuterAlt(localctx, 3)
+                self.state = 89
+                self.returnStat()
+                pass
+
+            elif la_ == 4:
+                self.enterOuterAlt(localctx, 4)
+                self.state = 90
+                self.assignStat()
+                pass
+
+            elif la_ == 5:
+                self.enterOuterAlt(localctx, 5)
+                self.state = 91
+                self.exprStat()
+                pass
+
+
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
     class AssignStatContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
@@ -745,16 +832,16 @@ class CymbolParser ( Parser ):
     def assignStat(self):
 
         localctx = CymbolParser.AssignStatContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 14, self.RULE_assignStat)
+        self.enterRule(localctx, 16, self.RULE_assignStat)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 87
+            self.state = 94
             self.match(CymbolParser.ID)
-            self.state = 88
+            self.state = 95
             self.match(CymbolParser.AS)
-            self.state = 89
+            self.state = 96
             self.expr(0)
-            self.state = 90
+            self.state = 97
             self.match(CymbolParser.SEMICOLON)
         except RecognitionException as re:
             localctx.exception = re
@@ -796,21 +883,21 @@ class CymbolParser ( Parser ):
     def returnStat(self):
 
         localctx = CymbolParser.ReturnStatContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 16, self.RULE_returnStat)
+        self.enterRule(localctx, 18, self.RULE_returnStat)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 92
+            self.state = 99
             self.match(CymbolParser.RETURN)
-            self.state = 94
+            self.state = 101
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CymbolParser.LP) | (1 << CymbolParser.NOT) | (1 << CymbolParser.PLUS) | (1 << CymbolParser.MINUS) | (1 << CymbolParser.BOOL) | (1 << CymbolParser.ID) | (1 << CymbolParser.INT) | (1 << CymbolParser.FLOAT) | (1 << CymbolParser.STRING))) != 0):
-                self.state = 93
+                self.state = 100
                 self.expr(0)
 
 
-            self.state = 96
+            self.state = 103
             self.match(CymbolParser.SEMICOLON)
         except RecognitionException as re:
             localctx.exception = re
@@ -850,16 +937,16 @@ class CymbolParser ( Parser ):
     def ifElseStat(self):
 
         localctx = CymbolParser.IfElseStatContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 18, self.RULE_ifElseStat)
+        self.enterRule(localctx, 20, self.RULE_ifElseStat)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 98
+            self.state = 105
             self.ifStat()
-            self.state = 100
+            self.state = 107
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,9,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,10,self._ctx)
             if la_ == 1:
-                self.state = 99
+                self.state = 106
                 self.elseStat()
 
 
@@ -913,38 +1000,38 @@ class CymbolParser ( Parser ):
     def ifElseExprStat(self):
 
         localctx = CymbolParser.IfElseExprStatContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 20, self.RULE_ifElseExprStat)
+        self.enterRule(localctx, 22, self.RULE_ifElseExprStat)
         try:
-            self.state = 107
+            self.state = 114
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,10,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,11,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 102
+                self.state = 109
                 self.block()
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 103
+                self.state = 110
                 self.ifElseStat()
                 pass
 
             elif la_ == 3:
                 self.enterOuterAlt(localctx, 3)
-                self.state = 104
+                self.state = 111
                 self.returnStat()
                 pass
 
             elif la_ == 4:
                 self.enterOuterAlt(localctx, 4)
-                self.state = 105
+                self.state = 112
                 self.assignStat()
                 pass
 
             elif la_ == 5:
                 self.enterOuterAlt(localctx, 5)
-                self.state = 106
+                self.state = 113
                 self.exprStat()
                 pass
 
@@ -986,12 +1073,12 @@ class CymbolParser ( Parser ):
     def exprStat(self):
 
         localctx = CymbolParser.ExprStatContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 22, self.RULE_exprStat)
+        self.enterRule(localctx, 24, self.RULE_exprStat)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 109
+            self.state = 116
             self.expr(0)
-            self.state = 110
+            self.state = 117
             self.match(CymbolParser.SEMICOLON)
         except RecognitionException as re:
             localctx.exception = re
@@ -1036,21 +1123,21 @@ class CymbolParser ( Parser ):
     def exprList(self):
 
         localctx = CymbolParser.ExprListContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 24, self.RULE_exprList)
+        self.enterRule(localctx, 26, self.RULE_exprList)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 112
+            self.state = 119
             self.expr(0)
-            self.state = 117
+            self.state = 124
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while _la==CymbolParser.COMMA:
-                self.state = 113
+                self.state = 120
                 self.match(CymbolParser.COMMA)
-                self.state = 114
+                self.state = 121
                 self.expr(0)
-                self.state = 119
+                self.state = 126
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
@@ -1101,18 +1188,18 @@ class CymbolParser ( Parser ):
     def ifStat(self):
 
         localctx = CymbolParser.IfStatContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 26, self.RULE_ifStat)
+        self.enterRule(localctx, 28, self.RULE_ifStat)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 120
+            self.state = 127
             self.match(CymbolParser.IF)
-            self.state = 121
+            self.state = 128
             self.match(CymbolParser.LP)
-            self.state = 122
+            self.state = 129
             self.expr(0)
-            self.state = 123
+            self.state = 130
             self.match(CymbolParser.RP)
-            self.state = 124
+            self.state = 131
             self.ifElseExprStat()
         except RecognitionException as re:
             localctx.exception = re
@@ -1151,99 +1238,13 @@ class CymbolParser ( Parser ):
     def elseStat(self):
 
         localctx = CymbolParser.ElseStatContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 28, self.RULE_elseStat)
+        self.enterRule(localctx, 30, self.RULE_elseStat)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 126
+            self.state = 133
             self.match(CymbolParser.ELSE)
-            self.state = 127
-            self.ifElseExprStat()
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.exitRule()
-        return localctx
-
-
-    class StatContext(ParserRuleContext):
-
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
-
-        def varDecl(self):
-            return self.getTypedRuleContext(CymbolParser.VarDeclContext,0)
-
-
-        def ifElseStat(self):
-            return self.getTypedRuleContext(CymbolParser.IfElseStatContext,0)
-
-
-        def returnStat(self):
-            return self.getTypedRuleContext(CymbolParser.ReturnStatContext,0)
-
-
-        def assignStat(self):
-            return self.getTypedRuleContext(CymbolParser.AssignStatContext,0)
-
-
-        def exprStat(self):
-            return self.getTypedRuleContext(CymbolParser.ExprStatContext,0)
-
-
-        def getRuleIndex(self):
-            return CymbolParser.RULE_stat
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitStat" ):
-                return visitor.visitStat(self)
-            else:
-                return visitor.visitChildren(self)
-
-
-
-
-    def stat(self):
-
-        localctx = CymbolParser.StatContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 30, self.RULE_stat)
-        try:
             self.state = 134
-            self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,12,self._ctx)
-            if la_ == 1:
-                self.enterOuterAlt(localctx, 1)
-                self.state = 129
-                self.varDecl()
-                pass
-
-            elif la_ == 2:
-                self.enterOuterAlt(localctx, 2)
-                self.state = 130
-                self.ifElseStat()
-                pass
-
-            elif la_ == 3:
-                self.enterOuterAlt(localctx, 3)
-                self.state = 131
-                self.returnStat()
-                pass
-
-            elif la_ == 4:
-                self.enterOuterAlt(localctx, 4)
-                self.state = 132
-                self.assignStat()
-                pass
-
-            elif la_ == 5:
-                self.enterOuterAlt(localctx, 5)
-                self.state = 133
-                self.exprStat()
-                pass
-
-
+            self.ifElseExprStat()
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
