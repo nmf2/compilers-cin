@@ -1,13 +1,13 @@
-int funct (int a, int b, bool c){
-    bool i = false;
-    if(!i){
-        return 0;
+int a = 0;
+bool b = a;
+
+int main (){
+    bool c = 0;
+    c = "ok";
+    
+    if (c == "ok") {
+        c = true;
     }
-}
-int funct2 (int a, int b, bool c){
 
-    bool ok = false;
-    ok = funct(123,1,false);
-
-    return 0;
+    return false;
 }

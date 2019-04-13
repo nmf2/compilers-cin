@@ -24,21 +24,24 @@ class CymbolCheckerVisitor(CymbolVisitor):
     def getLineAndColumn(self, var):
         return 'line ' + str(var.getSymbol().line) + ', column ' + str(var.getSymbol().column)
 
+    def getLineAndColumn2(self, var):
+        return 'line ' + str(var.line) + ', column ' + str(var.column)
     # START TYPES
+
     def visitIntExpr(self, ctx: CymbolParser.IntExprContext):
-        print("visting "+Type.INT)
+        # print("visting "+Type.INT)
         return Type.INT
 
     def visitFloatExpr(self, ctx: CymbolParser.FloatExprContext):
-        print("visting "+Type.FLOAT)
+        # print("visting "+Type.FLOAT)
         return Type.FLOAT
 
     def visitBoolExpr(self, ctx: CymbolParser.BoolExprContext):
-        print("visting "+Type.BOOL)
+        # print("visting "+Type.BOOL)
         return Type.BOOL
 
     def visitStringExpr(self, ctx: CymbolParser.StringExprContext):
-        print("visting "+Type.STRING)
+        # print("visting "+Type.STRING)
         return Type.STRING
     # END TYPES
 
@@ -52,7 +55,7 @@ class CymbolCheckerVisitor(CymbolVisitor):
         right = ctx.expr()[1].accept(self)
         op = ctx.op.text
         types = [left, right]
-        print('left', left, 'right', right)
+        # print('left', left, 'right', right)
 
         if left == Type.INT and right == Type.INT:
             result = Type.INT
@@ -75,12 +78,11 @@ class CymbolCheckerVisitor(CymbolVisitor):
                 operation = 'subtract'
             print(
                 "Error in {}, operator {}: trying to {} a value of type {} with another of type {}."
-                .format(self.getLineAndColumnTyped(ctx.expr()[1], right), op, operation, left, right)
+                .format(self.getLineAndColumn2(ctx.expr()[1].start), op, operation, left, right)
             )
-            exit(0)
 
-        print("AddSub of " + left + " " + right +
-              " that results in a " + result)
+        # print("AddSub of " + left + " " + right +
+        #       " that results in a " + result)
         return result
 
     def visitSignedExpr(self, ctx: CymbolParser.SignedExprContext):
@@ -95,15 +97,13 @@ class CymbolCheckerVisitor(CymbolVisitor):
                 "Error in {}, operator {}: the type {} can't be signed"
                 .format(self.getLineAndColumnTyped(ctx.expr(), element), ctx.op.text, element)
             )
-            exit(0)
 
-        print("Signed " + element + " results in a " + result)
+        # print("Signed " + element + " results in a " + result)
         return result
 
     def visitNotExpr(self, ctx: CymbolParser.NotExprContext):
         # element = ctx.expr()
         # print('ctx', dir(ctx))
-        # exit(0)
         typ = ctx.expr().accept(self)
         if typ == Type.BOOL:
             result = Type.BOOL
@@ -114,7 +114,6 @@ class CymbolCheckerVisitor(CymbolVisitor):
                 "Error in {}, operator !: the ! operator can't be used with the type {}"
                 .format(self.getLineAndColumnTyped(ctx, 'NOT'), typ)
             )
-            exit(0)
         # print("Not " + element + " results in a " + result)
 
         return result
@@ -136,9 +135,8 @@ class CymbolCheckerVisitor(CymbolVisitor):
             result = Type.VOID
             print(
                 "Error in {}, operator {}: the {} {} {} operation isn't supported, the types don't match."
-                .format(self.getLineAndColumnTyped(ctx.expr()[1], right), op, left, op, right)
+                .format(self.getLineAndColumn2(ctx.expr()[1].start), op, left, op, right)
             )
-            exit(0)
 
         return result
 
@@ -163,12 +161,11 @@ class CymbolCheckerVisitor(CymbolVisitor):
             result = Type.VOID
             print(
                 "Error in {}, operator {}: the {} {} {} operation isn't supported, the types don't match."
-                .format(self.getLineAndColumnTyped(ctx.expr()[1], right), op, left, op, right)
+                .format(self.getLineAndColumn2(ctx.expr()[1].start), op, left, op, right)
             )
-            exit(0)
 
-        print("MulDiv (" + op + ") of " + left + " " + right +
-              " that results in a " + result)
+        # print("MulDiv (" + op + ") of " + left + " " + right +
+        #       " that results in a " + result)
         return result
 
     def visitAndOrExpr(self, ctx: CymbolParser.AndOrExprContext):
@@ -178,28 +175,26 @@ class CymbolCheckerVisitor(CymbolVisitor):
 
         if left == Type.BOOL and right == Type.BOOL:
             result = Type.BOOL
-
         else:
             result = Type.VOID
             print(
                 "Error in {}, operator {}: the {} {} {} operation isn't supported, the types don't match."
-                .format(self.getLineAndColumnTyped(ctx.expr()[1], right), op, left, op, right)
+                .format(self.getLineAndColumn2(ctx.expr()[1].start), op, left, op, right)
             )
-            exit(0)
-        print("AndOr of " + left + " " + right +
-              " that results in a " + result)
+        # print("AndOr of " + left + " " + right +
+        #       " that results in a " + result)
         return result
     # END OPERATIONS
 
     # START DECLARATIONS
     def visitFuncDecl(self, ctx: CymbolParser.FuncDeclContext):
         function_name = ctx.ID().getText()
-        print('funcDecl', function_name)
+        # print('funcDecl', function_name)
         typ = ctx.tyype().getText()
         # self.functions_info[function_name] = typ
         params = []
         paramList = []
-        if ctx.paramTypeList != None:
+        if ctx.paramTypeList() != None:
             paramList = ctx.paramTypeList().paramType()
         for param in paramList:
             self.vars_types[param.ID().getText()] = param.tyype().getText()
@@ -212,25 +207,24 @@ class CymbolCheckerVisitor(CymbolVisitor):
             'type': typ,
             'params': params
         }
-        print('params', params)
+        # print('params', params)
         return self.visitChildren(ctx)
 
     def visitVarDecl(self, ctx: CymbolParser.VarDeclContext):
-        print('var decl')
+        # print('var decl')
         var_name = ctx.ID().getText()
         tyype = ctx.tyype().getText()
-        print("tyype = " + tyype)
+        # print("tyype = " + tyype)
 
         if (tyype == Type.VOID):
             print(
                 "Error in {}: Variable '{}' of the type '{}' can't be declared"
                 .format(self.getLineAndColumn(ctx.ID()), var_name, tyype)
             )
-            exit(0)
         else:
             if ctx.expr() != None:
                 init = ctx.expr().accept(self)
-                print("init = " + init)
+                # print("init = " + init)
                 if init != tyype:
                     print(
                         "Error in {}, operator =: Variable '{}': The declaration type ({}) is different than the assignment type ({})"
@@ -238,7 +232,7 @@ class CymbolCheckerVisitor(CymbolVisitor):
                     )
             self.vars_types[var_name] = tyype
 
-        print("saved variable " + var_name + " of type " + tyype)
+        # print("saved variable " + var_name + " of type " + tyype)
         return tyype
     # END DECLARATIONS
 
@@ -260,7 +254,6 @@ class CymbolCheckerVisitor(CymbolVisitor):
                     'Error in {}: Misplaced return statement.'
                     .format(self.getLineAndColumnTyped(ctx, 'RETURN'))
                 )
-                exit(0)
             functionType = getattr(parent, 'functionType', True)
 
         functionType = functionType.getText()
@@ -269,13 +262,12 @@ class CymbolCheckerVisitor(CymbolVisitor):
         if(ctx.expr() != None):
             retType = ctx.expr().accept(self)
 
-        print('ft', functionType, 'rt', retType)
+        # print('ft', functionType, 'rt', retType)
         if(functionType != retType):
             print(
                 'Error in {}: function type ({}) differs from return type ({})'
                 .format(self.getLineAndColumnTyped(ctx, 'RETURN'), functionType, retType)
             )
-            exit(0)
 
     def visitFunctionCallExpr(self, ctx: CymbolParser.FunctionCallExprContext):
         func_name = ctx.ID().getText()
@@ -289,13 +281,11 @@ class CymbolCheckerVisitor(CymbolVisitor):
                     'Error in {}: function call {} has too many parameters'
                     .format(self.getLineAndColumn(ctx.ID()), ctx.getText())
                 )
-                exit(0)
             elif len(paramList) < len(self.functions_info[func_name]['params']):
                 print(
                     'Error in {}: function call {} doesn\'t have enough parameters'
                     .format(self.getLineAndColumn(ctx.ID()), ctx.getText())
                 )
-                exit(0)
             i = 0
             for param in paramList:
                 givenParamType = param.accept(self)
@@ -305,7 +295,6 @@ class CymbolCheckerVisitor(CymbolVisitor):
                         'Error in {}: when calling function \'{}\': the parameter of number {} of type {} doesn\'t match expected type {}'
                         .format(self.getLineAndColumnTyped(param, givenParamType), func_name, i+1, givenParamType, funcParamType)
                     )
-                    exit(0)
                 i += 1
         else:
             if len(self.functions_info[func_name]['params']) != 0:
@@ -313,7 +302,6 @@ class CymbolCheckerVisitor(CymbolVisitor):
                     'Error in {}: function call {} doesn\'t have enough parameters'
                     .format(self.getLineAndColumn(ctx.ID()), ctx.getText())
                 )
-                exit(0)
         return self.functions_info[ctx.ID().getText()]["type"]
 
     def visitAssignStat(self, ctx: CymbolParser.AssignStatContext):
@@ -323,9 +311,8 @@ class CymbolCheckerVisitor(CymbolVisitor):
         if varType != exprType:
             print(
                 "Error in {}, operator =: assignment '{}': The variable's type ({}) is different than the expression type ({})"
-                .format(self.getLineAndColumn(ctx.ID()), varName, varType, exprType)
+                .format(self.getLineAndColumn2(ctx.start), varName, varType, exprType)
             )
-            exit(0)
 
     def aggregateResult(self, aggregate: Type, next_result: Type):
         return next_result if next_result != None else aggregate
