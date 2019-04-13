@@ -4,3 +4,10 @@ int funct (int a, int b, bool c){
         return 0;
     }
 }
+int funct2 (int a, int b, bool c){
+
+    bool ok = false;
+    ok = funct(123,1,false);
+
+    return 0;
+}

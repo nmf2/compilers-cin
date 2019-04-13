@@ -113,8 +113,6 @@ ifStat : 'if' '(' expr ')' ifElseExprStat
 elseStat : 'else' ifElseExprStat
          ;
 
-
-
 expr : ID '(' exprList? ')'                      #FunctionCallExpr
      | op=('+' | '-') expr                       #SignedExpr
      | '!' expr                                  #NotExpr
