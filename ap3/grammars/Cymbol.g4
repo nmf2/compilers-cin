@@ -113,17 +113,17 @@ ifStat : 'if' '(' expr ')' ifElseExprStat
 elseStat : 'else' ifElseExprStat
          ;
 
-expr : ID '(' exprList? ')'                      #FunctionCallExpr
-     | op=('+' | '-') expr                       #SignedExpr
-     | '!' expr                                  #NotExpr
-     | expr op=('<' | '>' | '<=' | '>=') expr    #ComparisonExpr
-     | expr op=('*' | '/') expr                  #MulDivExpr
-     | expr op=('+' | '-') expr                  #AddSubExpr
-     | expr op=('&&' | '||') expr                #AndOrExpr
-     | ID                                        #VarIdExpr
-     | INT                                       #IntExpr
-     | FLOAT                                     #FloatExpr
-     | STRING                                    #StringExpr
-     | BOOL                                      #BoolExpr
-     | '(' expr ')'                              #ParenExpr
+expr : ID '(' exprList? ')'                                    #FunctionCallExpr
+     | op=('+' | '-') expr                                     #SignedExpr
+     | '!' expr                                                #NotExpr
+     | expr op=('<' | '>' | '<=' | '>=' | '!=' | '==') expr    #ComparisonExpr
+     | expr op=('*' | '/') expr                                #MulDivExpr
+     | expr op=('+' | '-') expr                                #AddSubExpr
+     | expr op=('&&' | '||') expr                              #AndOrExpr
+     | ID                                                      #VarIdExpr
+     | INT                                                     #IntExpr
+     | FLOAT                                                   #FloatExpr
+     | STRING                                                  #StringExpr
+     | BOOL                                                    #BoolExpr
+     | '(' expr ')'                                            #ParenExpr
      ;
