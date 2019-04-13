@@ -16,11 +16,6 @@ class CymbolCheckerVisitor(CymbolVisitor):
     functions_info = {}
     # UTILS
 
-    def getLineAndColumnTyped(self, var, tyype):
-        ctx = getattr(var, str(tyype).upper())
-        # ingenious, right? :) Go to CymbolParser.py to understand.
-        return self.getLineAndColumn(ctx())
-
     def getLineAndColumn(self, var):
         return 'line ' + str(var.getSymbol().line) + ', column ' + str(var.getSymbol().column)
 
@@ -47,8 +42,17 @@ class CymbolCheckerVisitor(CymbolVisitor):
 
     # START OPERATIONS
     def visitVarIdExpr(self, ctx: CymbolParser.VarIdExprContext):
-        ctx.ID().accept(self)
-        return self.vars_types[ctx.ID().getText()]
+        # ctx.ID().accept(self)
+        typ = None
+        if not ctx.ID().getText() in self.vars_types:
+            print(
+                "Error in {}: Variable '{}' not defined"
+                .format(self.getLineAndColumn(ctx.ID()), ctx.ID().getText())
+            )
+        else:
+            typ = self.vars_types[ctx.ID().getText()]
+
+        return typ
 
     def visitAddSubExpr(self, ctx: CymbolParser.AddSubExprContext):
         left = ctx.expr()[0].accept(self)
@@ -95,7 +99,7 @@ class CymbolCheckerVisitor(CymbolVisitor):
             result = Type.VOID
             print(
                 "Error in {}, operator {}: the type {} can't be signed"
-                .format(self.getLineAndColumnTyped(ctx.expr(), element), ctx.op.text, element)
+                .format(self.getLineAndColumn2(ctx.expr().start), ctx.op.text, element)
             )
 
         # print("Signed " + element + " results in a " + result)
@@ -112,7 +116,7 @@ class CymbolCheckerVisitor(CymbolVisitor):
 
             print(
                 "Error in {}, operator !: the ! operator can't be used with the type {}"
-                .format(self.getLineAndColumnTyped(ctx, 'NOT'), typ)
+                .format(self.getLineAndColumn2(ctx.start), typ)
             )
         # print("Not " + element + " results in a " + result)
 
@@ -134,7 +138,7 @@ class CymbolCheckerVisitor(CymbolVisitor):
         else:
             result = Type.VOID
             print(
-                "Error in {}, operator {}: the {} {} {} operation isn't supported, the types don't match."
+                "Error in {}, operator {}: the ({}) {} ({}) operation isn't supported, the types don't match."
                 .format(self.getLineAndColumn2(ctx.expr()[1].start), op, left, op, right)
             )
 
@@ -160,7 +164,7 @@ class CymbolCheckerVisitor(CymbolVisitor):
         else:
             result = Type.VOID
             print(
-                "Error in {}, operator {}: the {} {} {} operation isn't supported, the types don't match."
+                "Error in {}, operator {}: the ({}) {} ({}) operation isn't supported, the types don't match."
                 .format(self.getLineAndColumn2(ctx.expr()[1].start), op, left, op, right)
             )
 
@@ -178,7 +182,7 @@ class CymbolCheckerVisitor(CymbolVisitor):
         else:
             result = Type.VOID
             print(
-                "Error in {}, operator {}: the {} {} {} operation isn't supported, the types don't match."
+                "Error in {}, operator {}: the ({}) {} ({}) operation isn't supported, the types don't match."
                 .format(self.getLineAndColumn2(ctx.expr()[1].start), op, left, op, right)
             )
         # print("AndOr of " + left + " " + right +
@@ -252,7 +256,7 @@ class CymbolCheckerVisitor(CymbolVisitor):
             if (parent == None):
                 print(
                     'Error in {}: Misplaced return statement.'
-                    .format(self.getLineAndColumnTyped(ctx, 'RETURN'))
+                    .format(self.getLineAndColumn2(ctx.start))
                 )
             functionType = getattr(parent, 'functionType', True)
 
@@ -264,9 +268,11 @@ class CymbolCheckerVisitor(CymbolVisitor):
 
         # print('ft', functionType, 'rt', retType)
         if(functionType != retType):
+            if (retType == None):
+                retType = 'void'
             print(
                 'Error in {}: function type ({}) differs from return type ({})'
-                .format(self.getLineAndColumnTyped(ctx, 'RETURN'), functionType, retType)
+                .format(self.getLineAndColumn2(ctx.start), functionType, retType)
             )
 
     def visitFunctionCallExpr(self, ctx: CymbolParser.FunctionCallExprContext):
@@ -293,7 +299,7 @@ class CymbolCheckerVisitor(CymbolVisitor):
                 if(givenParamType != funcParamType):
                     print(
                         'Error in {}: when calling function \'{}\': the parameter of number {} of type {} doesn\'t match expected type {}'
-                        .format(self.getLineAndColumnTyped(param, givenParamType), func_name, i+1, givenParamType, funcParamType)
+                        .format(self.getLineAndColumn2(param.start), func_name, i+1, givenParamType, funcParamType)
                     )
                 i += 1
         else:
